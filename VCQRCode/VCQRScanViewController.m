@@ -25,12 +25,11 @@
     
     
     _scanView = [VCQRScanView new];
-//    [self.view addSubview:_scanView];
+    [self.view addSubview:_scanView];
     _scanView.frame = self.view.bounds;
     [_scanView startAnimation];
 
     _reader = [VCQRReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-//    [_scanView.layer insertSublayer:_reader.previewLayer atIndex:0];
     _reader.previewLayer.frame = self.view.bounds;
     
     [self.view.layer insertSublayer:_reader.previewLayer atIndex:0];
